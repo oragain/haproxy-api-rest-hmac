@@ -1,0 +1,13 @@
+[Unit]
+Description=HAProxy HMAC Enabled API
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /opt/haproxy_api/haproxy_api.py
+WorkingDirectory=/opt/haproxy_api
+Restart=always
+RestartSec=2
+User=haproxy_api
+
+[Install]
+WantedBy=sysinit.target
